@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.NBNSTIC.AmitJadhav.Raksha.Account.IntroScreen"
+    >
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fitsSystemWindows="true"
+      android:theme="@style/AppTheme"
+      >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/green"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/white"
+        />
+
+
+  </com.google.android.material.appbar.AppBarLayout>
+  <include
+      layout="@layout/home_screen"
+      android:id="@+id/include_home"
+      android:visibility="gone"
+      />
+  <include
+      layout="@layout/activity_council"
+      android:id="@+id/include_council"
+      android:visibility="gone"
+      />
+
+  <include
+      layout="@layout/activity_complaint"
+      android:id="@+id/include_maintenance"
+      android:visibility="gone"
+      />
+  <include
+      layout="@layout/activity_mess"
+      android:id="@+id/include_tabbed_content"
+      android:visibility="gone"
+      />
+  <include
+      layout="@layout/update_password"
+      android:id="@+id/include_update_pass"
+      android:visibility="gone"
+      />
+
+  <include
+      layout="@layout/activity_profile"
+      android:id="@+id/include_profile"
+      android:visibility="gone"
+      />
+
+  <include
+      layout="@layout/activity_resources"
+      android:id="@+id/include_res"
+      android:visibility="gone"
+      />
+
+  <include
+      layout="@layout/activity_feedback"
+      android:id="@+id/include_feedback"
+      android:visibility="gone"
+      />
+
+  <include
+      layout="@layout/settings_content"
+      android:id="@+id/include_settings"
+      android:visibility="gone"
+      />
+
+</LinearLayout>

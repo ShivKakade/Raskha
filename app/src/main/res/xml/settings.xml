@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+  <PreferenceCategory
+      android:title="Notifications">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="mess"
+        android:summary="Receive notification about what's cooked in the mess before every meal"
+        android:textColor="@color/black"
+        android:title="Mess Menu"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="news"
+        android:summary="Stay updated about upcoming events in hostel"
+        android:textColor="@color/black"
+        android:title="News"/>
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+      android:title="Feedback">
+
+    <Preference
+        android:key="feedback"
+        android:summary="Fill out the form to report a bug or give some feedback"
+        android:title="Feedback">
+    </Preference>
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+      android:title="About">
+
+    <Preference
+        android:summary="\nDesigned and Developed by:\nAmit Jadhav\nMrudula Shinde\nNikita Mathe\nAadinath Nawle"
+        android:title="Raksha">
+    </Preference>
+
+  </PreferenceCategory>
+
+</PreferenceScreen>

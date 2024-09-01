@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.NBNSTIC.AmitJadhav.Raksha">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="replace" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="false"
+        android:configChanges="keyboardHidden|screenSize"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/sinhgad"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:node="replace"
+        tools:replace="allowBackup"
+        >
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Account.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".sos_activity"
+            android:theme="@style/Theme.Wsafety"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:foregroundServiceType="location"
+            />
+        <activity
+            android:name=".registration_activity"
+            android:exported="false"
+            android:theme="@style/Theme.Wsafety"
+            android:screenOrientation="portrait"
+            android:foregroundServiceType="location"
+            />
+        <activity
+            android:name=".ServiceMine"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TitleBar"
+            android:foregroundServiceType="location"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Account.IntroScreen"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.TestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Account.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Account.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+
+
+        </activity>
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Account.ForgotPassword"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TitleBar"
+
+            />
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity"
+            android:exported="false"
+            android:label="Council"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TitleBar" />
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TitleBar"
+
+            />
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Mess.MessActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TitleBar">
+
+        </activity>
+
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Complaints.ComplaintsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar.TitleBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.HomeActivity" />
+        </activity>
+
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Complaints.ComplainRegister"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Complaints.ComplaintsActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Complaints.ComplainStatus"
+            android:exported="false"
+            android:screenOrientation="portrait"
+
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Complaints.ComplaintsActivity" />
+        </activity>
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Complaints.StatusDetails"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Complaints.ComplaintsActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilWarden"
+            android:exported="false"
+            android:label="Council"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilGenSecy"
+            android:exported="false"
+            android:label="Council"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilSportsSecy"
+            android:exported="false"
+            android:label="Council">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilCulturalSecy"
+            android:exported="false"
+            android:label="Council">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilFHostelSecy"
+            android:exported="false"
+            android:label="Council"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilFHosMainSecy"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilFMessSecy"
+            android:exported="false"
+            android:label="Council"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilEmergency"
+            android:exported="false"
+            android:label="Council"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilFSportsSecy"
+            android:exported="false"
+            android:label="Council"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Council.CouncilActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.User.UpdatePassword"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Account.Warden"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.User.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.HomeActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.User.EditInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.User.ProfileActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.ResourceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.HomeActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.CS.CSResourceDocs"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Resources.CS.CSBranch" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.CS.CSBranch"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Resources.ResourceActivity" />
+        </activity>
+
+        <activity android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.EE.EEBranch">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Resources.ResourceActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.EE.EEResourceDocs"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Resources.EE.EEBranch" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.ME.MEBranch"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Resources.ResourceActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.ME.MEResourceDocs"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Resources.ME.MEBranch" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.Common.CommonBranch"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Resources.ResourceActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Resources.Common.CommonResourceDocs"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.Resources.Common.CommonBranch" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Feedback.Feedback"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.HomeActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Settings.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/SettingsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NBNSTIC.AmitJadhav.Raksha.HomeActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Mess.messnotification.AlarmBootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Mess.messnotification.BreakfastAlarmReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" />
+
+        <receiver
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Mess.messnotification.LunchAlarmReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" />
+
+        <receiver
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Mess.messnotification.TiffinAlarmReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" />
+
+        <receiver
+            android:name="com.NBNSTIC.AmitJadhav.Raksha.Mess.messnotification.DinnerAlarmReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" />
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <service
+            android:name=".ServiceMine"
+            android:enabled="true"
+            android:foregroundServiceType="location" />
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+    </application>
+
+</manifest>

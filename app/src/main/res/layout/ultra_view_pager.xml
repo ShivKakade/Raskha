@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ultra_viewpager_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/council_background"
+    android:backgroundTint="@color/golden"
+    android:paddingBottom="10dp"
+    >
+
+  <TextView
+      android:id="@+id/council_warden_desgn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:hint="Designation"
+      android:minHeight="70dp"
+      android:padding="8dp"
+      android:textColor="@color/white"
+      android:textColorHint="@color/white"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      />
+
+  <ImageView
+      android:id="@+id/council_warden_pic"
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+      android:layout_below="@id/council_warden_desgn"
+      android:background="@color/green"
+      />
+
+
+  <TextView
+      android:id="@+id/council_warden_name"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:layout_below="@id/council_warden_pic"
+      android:background="@color/detail_color"
+      android:gravity="center"
+      android:hint="Name"
+      android:textColor="@color/white"
+      android:textColorHint="@color/white"
+      android:textSize="20sp"
+      />
+
+  <ImageButton
+      android:id="@+id/council_warden_phone"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentStart="true"
+      android:layout_below="@id/council_warden_name"
+      android:layout_marginStart="50dp"
+      android:layout_marginTop="15dp"
+      android:background="@color/fui_transparent"
+      android:scaleType="fitCenter"
+      android:src="@drawable/icon_call"
+      />
+
+  <ImageButton
+      android:id="@+id/council_warden_email"
+      android:layout_width="45dp"
+      android:layout_height="45dp"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@id/council_warden_name"
+      android:layout_marginEnd="50dp"
+      android:layout_marginTop="15dp"
+      android:background="@color/fui_transparent"
+      android:scaleType="fitCenter"
+      android:src="@drawable/icon_gmail"
+      />
+</RelativeLayout>

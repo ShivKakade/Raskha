@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "152759936126",
+    "firebase_url": "https://raksha-1b9d4-default-rtdb.firebaseio.com",
+    "project_id": "raksha-1b9d4",
+    "storage_bucket": "raksha-1b9d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152759936126:android:a8f5a4d3b9ad9341abe42f",
+        "android_client_info": {
+          "package_name": "com.NBNSTIC.AmitJadhav.Raksha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152759936126-sonvul4og23itt7fajj0br4ulkeqbav2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.NBNSTIC.AmitJadhav.Raksha",
+            "certificate_hash": "3d36f975ee9d898967232f7523a060770bcaf190"
+          }
+        },
+        {
+          "client_id": "152759936126-5q2rg762pooian59bngbo20pm9hro93c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJI8F0mK7Ephsba7l_XIBu4WMvEigujFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152759936126-5q2rg762pooian59bngbo20pm9hro93c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

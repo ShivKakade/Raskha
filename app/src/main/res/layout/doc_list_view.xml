@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/doc_main"
+    >
+
+  <TextView
+      android:id="@+id/doc_empty"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="20dp"
+      android:gravity="center"
+      android:padding="5dp"
+      android:text="Resource list is empty"
+      android:textColor="@color/grey"
+      android:textStyle="bold"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/doc_list"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="70dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:clipToPadding="false"
+      android:scrollbars="vertical"
+      >
+
+  </androidx.recyclerview.widget.RecyclerView>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/doc_add"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginBottom="15dp"
+      android:layout_marginEnd="15dp"
+      android:src="@drawable/icon_fab"
+      app:backgroundTint="@color/colorAccent"
+      app:fabSize="normal"
+      app:rippleColor="@color/purple"
+      app:tint="@color/white"
+      />
+</RelativeLayout>
